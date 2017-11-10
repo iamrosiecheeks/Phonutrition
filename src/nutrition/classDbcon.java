@@ -5,9 +5,11 @@
  */
 package nutrition;
 
-import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -15,42 +17,35 @@ import java.sql.SQLException;
  */
 public class classDbcon {
     
-     static String us = "root";
-   static String pass = "145";
-   static String bd = "nutrition";
-    static String url = "jdbc:mysql://192.168.6.13/"+bd;
+   // public static String DATABASE_URL = "jdbc:mysql://192.168.20.12/emyat";
+     public static String DATABASE_URL = "jdbc:mysql://localhost/nutrition";
+    //it13_setbabe is the name of the database
+    public static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    public static java.sql.Connection conn = null;
+ 
     
-    public Connection con = null;
-    public classDbcon(){
-        
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(url, us, pass);
-        
-            if(con!=null){
-                System.out.println("En linea");
-            }
-        }catch(SQLException ex){
-            System.out.println(ex.getMessage());
-        }catch(ClassNotFoundException ex){
-            System.out.println(ex.getMessage());
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-    }
+   // static String userName = "emyat";
+    static String userName = "root";
+   // static String password = "12345";
+    static String password = "";
+    static String url = DATABASE_URL;
     
-    public Connection getConnect(){
-        return con;
-    }
-    
-    public void desconnect(){
-        con = null;
-    }
-    
-    public static void main(String[] args) {
-        classDbcon c = new classDbcon();
-        c.getConnect();
-    }
+ public static void dbconnect() {
 
-    
+        try {
+
+            Class.forName(JDBC_DRIVER).newInstance();
+            if (conn == null) {
+                conn = (java.sql.Connection) DriverManager.getConnection(url, userName, password);
+                System.out.println("Database connected...");
+           
+            } else if (conn.isClosed()) {
+                conn = (java.sql.Connection) DriverManager.getConnection(url, userName, password);
+            }
+        } catch (Exception x) {
+            System.err.println("Cannot Connect to Database...");
+             System.err.println(x);
+        }
+
+    }
 }

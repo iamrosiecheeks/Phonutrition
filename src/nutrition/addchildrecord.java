@@ -49,7 +49,6 @@ public class addchildrecord extends javax.swing.JFrame {
         jLabel167 = new javax.swing.JLabel();
         jTextField71 = new javax.swing.JTextField();
         jLabel168 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel221 = new javax.swing.JLabel();
         jLabel222 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -260,7 +259,6 @@ public class addchildrecord extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         healthhistory = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel19 = new javax.swing.JLabel();
         jTextField63 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
@@ -732,9 +730,14 @@ public class addchildrecord extends javax.swing.JFrame {
         jLabel162 = new javax.swing.JLabel();
         healthservices = new javax.swing.JPanel();
         jPanel49 = new javax.swing.JPanel();
-        jPanel50 = new javax.swing.JPanel();
-        jPanel51 = new javax.swing.JPanel();
-        jPanel52 = new javax.swing.JPanel();
+        jLabel223 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton5 = new javax.swing.JButton();
+        jLabel224 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         summary = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -746,12 +749,11 @@ public class addchildrecord extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(229, 238, 255));
         setLocation(new java.awt.Point(50, 0));
-        setMinimumSize(new java.awt.Dimension(1260, 700));
+        setMinimumSize(new java.awt.Dimension(1270, 746));
         setName("mainform"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1260, 700));
         setResizable(false);
-        setSize(new java.awt.Dimension(1260, 700));
+        setSize(new java.awt.Dimension(1270, 746));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Headerpanel.setBackground(new java.awt.Color(249, 254, 247));
@@ -784,7 +786,6 @@ public class addchildrecord extends javax.swing.JFrame {
         jLabel168.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel168.setText("First Name");
         register.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, -1, -1));
-        register.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 200, 40));
 
         jLabel221.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel221.setText("(MM/DD/YYYY)");
@@ -1600,7 +1601,6 @@ public class addchildrecord extends javax.swing.JFrame {
 
         jLabel10.setText("Actual Height (cm) : ");
         healthhistory.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
-        healthhistory.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 220, 30));
 
         jLabel19.setText("Date of  weighing :");
         healthhistory.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
@@ -3369,15 +3369,43 @@ public class addchildrecord extends javax.swing.JFrame {
 
         jPanel49.setBackground(new java.awt.Color(249, 254, 247));
         jPanel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(203, 221, 255)));
-        jPanel49.add(jPanel50);
+        jPanel49.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        healthservices.add(jPanel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 600, 400));
+        jLabel223.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel223.setText("A. Para sa Bata");
+        jPanel49.add(jLabel223, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jPanel51.setBackground(new java.awt.Color(249, 254, 247));
-        jPanel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(203, 221, 255)));
-        jPanel51.add(jPanel52);
+        jPanel6.setBackground(new java.awt.Color(203, 221, 255));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        healthservices.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 600, 400));
+        jTable1.setBackground(new java.awt.Color(249, 254, 247));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Availed Health Services", "Facilitated by", "Recommendation"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        jPanel6.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 440));
+
+        jPanel49.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 580, 440));
+
+        jButton5.setText("Add");
+        jPanel49.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, 90, 30));
+
+        jLabel224.setText("year");
+        jPanel49.add(jLabel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
+
+        jTextPane1.setDisabledTextColor(new java.awt.Color(249, 254, 247));
+        jTextPane1.setEnabled(false);
+        jScrollPane3.setViewportView(jTextPane1);
+
+        jPanel49.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 70, -1));
+
+        healthservices.add(jPanel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 600, 530));
 
         jTabbedPane1.addTab("HEALTH SERVICES AVAILED", healthservices);
 
@@ -3394,7 +3422,7 @@ public class addchildrecord extends javax.swing.JFrame {
         jLabel3.setText("AddNew");
         Headerpanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 50, 20));
 
-        getContentPane().add(Headerpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 46, 1260, 700));
+        getContentPane().add(Headerpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 46, 1270, 700));
 
         topheaderpanel.setBackground(new java.awt.Color(203, 221, 255));
         topheaderpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -3417,7 +3445,7 @@ public class addchildrecord extends javax.swing.JFrame {
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Female Profile-48.png"))); // NOI18N
         topheaderpanel.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, -4, 50, 50));
 
-        getContentPane().add(topheaderpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 50));
+        getContentPane().add(topheaderpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3786,6 +3814,7 @@ public class addchildrecord extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -3994,8 +4023,6 @@ public class addchildrecord extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -4134,6 +4161,8 @@ public class addchildrecord extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel220;
     private javax.swing.JLabel jLabel221;
     private javax.swing.JLabel jLabel222;
+    private javax.swing.JLabel jLabel223;
+    private javax.swing.JLabel jLabel224;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel233;
     private javax.swing.JLabel jLabel234;
@@ -4314,9 +4343,7 @@ public class addchildrecord extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel48;
     private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel50;
-    private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
@@ -4361,12 +4388,15 @@ public class addchildrecord extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField100;
@@ -4465,6 +4495,7 @@ public class addchildrecord extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField97;
     private javax.swing.JTextField jTextField98;
     private javax.swing.JTextField jTextField99;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel otherinfo;
     private javax.swing.JPanel register;
     private javax.swing.JPanel summary;

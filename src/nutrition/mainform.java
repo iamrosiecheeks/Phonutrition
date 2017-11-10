@@ -43,8 +43,7 @@ public class mainform extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         topheaderpanel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        topusernamelabel = new javax.swing.JLabel();
         systemclosebutton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         Headerpanel = new javax.swing.JPanel();
@@ -65,11 +64,12 @@ public class mainform extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(229, 238, 255));
         setLocation(new java.awt.Point(50, 0));
-        setMinimumSize(new java.awt.Dimension(1260, 700));
+        setMinimumSize(new java.awt.Dimension(1270, 746));
         setName("mainform"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1260, 700));
+        setPreferredSize(new java.awt.Dimension(1270, 746));
         setResizable(false);
+        setSize(new java.awt.Dimension(1270, 746));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         menupanel.setBackground(new java.awt.Color(0, 18, 50));
@@ -152,21 +152,20 @@ public class mainform extends javax.swing.JFrame {
                 .addComponent(addrecordbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(102, 102, 102)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
+                .addGap(120, 120, 120)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
 
-        getContentPane().add(menupanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 90, 650));
+        getContentPane().add(menupanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 90, 700));
 
         topheaderpanel.setBackground(new java.awt.Color(203, 221, 255));
         topheaderpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        topheaderpanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, -6, 30, 50));
 
-        jLabel5.setText("User");
-        topheaderpanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 60, 20));
+        topusernamelabel.setText("User");
+        topheaderpanel.add(topusernamelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 60, 20));
 
         systemclosebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/error.png"))); // NOI18N
         systemclosebutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -183,7 +182,7 @@ public class mainform extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Female Profile-48.png"))); // NOI18N
         topheaderpanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, -4, 50, 50));
 
-        getContentPane().add(topheaderpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 50));
+        getContentPane().add(topheaderpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 50));
 
         Headerpanel.setBackground(new java.awt.Color(249, 254, 247));
         Headerpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -244,6 +243,8 @@ public class mainform extends javax.swing.JFrame {
         jLabel9.setText("Reports");
         Homepanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 270, 50, 20));
 
+        Headerpanel.add(Homepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 1150, 440));
+
         homebackbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/left-arrow.png"))); // NOI18N
         homebackbutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         homebackbutton.setBorderPainted(false);
@@ -254,11 +255,9 @@ public class mainform extends javax.swing.JFrame {
                 homebackbuttonActionPerformed(evt);
             }
         });
-        Homepanel.add(homebackbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 400, 40, 40));
+        Headerpanel.add(homebackbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 650, 40, 40));
 
-        Headerpanel.add(Homepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 1150, 440));
-
-        getContentPane().add(Headerpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 1170, 650));
+        getContentPane().add(Headerpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 1180, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -279,15 +278,18 @@ public class mainform extends javax.swing.JFrame {
     }//GEN-LAST:event_homebackbuttonActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:\
+        this.hide();
+         AddUser w = new AddUser();
+             w.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void addrecordbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addrecordbuttonActionPerformed
         // TODO add your handling code here:
        
          addchildrecord w = new addchildrecord();
-                    w.setVisible(true);
-                     this.dispose();
+         w.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_addrecordbuttonActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -365,8 +367,6 @@ public class mainform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -374,5 +374,6 @@ public class mainform extends javax.swing.JFrame {
     private javax.swing.JPanel menupanel;
     public javax.swing.JButton systemclosebutton;
     private javax.swing.JPanel topheaderpanel;
+    private javax.swing.JLabel topusernamelabel;
     // End of variables declaration//GEN-END:variables
 }
